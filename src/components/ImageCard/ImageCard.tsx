@@ -1,10 +1,16 @@
-import s from './ImageCard.module.css'
+import s from './ImageCard.module.css';
 
-function ImageCard({src, alt, onClick}) {
-    return (
-        <div className={s.container}>
-  <img src={src} alt={alt} onClick={onClick} />
-</div>
-    )
+interface ImageCardProps {
+  src: string;
+  alt: string;
+  onClick: () => void;
 }
+
+const ImageCard: React.FC<ImageCardProps> = ({ src, alt, onClick }) => {
+  return (
+    <div className={s.container}>
+      <img src={src} alt={alt} onClick={onClick} />
+    </div>
+  );
+};
 export default ImageCard;

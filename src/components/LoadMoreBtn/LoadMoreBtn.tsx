@@ -1,9 +1,13 @@
-import s from './LoadMoreBtn.module.css'
+import React from 'react';
+import s from './LoadMoreBtn.module.css';
 
-function LoadMoreBtn({newPage}) {
-    return (
-        <button type='button' className={s.loadBtn} onClick={newPage}>Load more</button>
-    )
+interface LoadMoreBtnProps {
+  newPage: () => void;
 }
 
+const LoadMoreBtn: React.FC<LoadMoreBtnProps> = ({ newPage }) => {
+  return (
+    <button type='button' className={s.loadBtn} onClick={newPage}>Load more</button>
+  );
+};
 export default LoadMoreBtn;

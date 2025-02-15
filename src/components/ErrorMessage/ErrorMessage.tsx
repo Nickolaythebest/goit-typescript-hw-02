@@ -1,8 +1,7 @@
 import React from 'react';
-
 import { ToastContainer, toast } from 'react-toastify';
 
-function ErrorMessage(){
+const ErrorMessage: React.FC = () => {
   const notify = () => toast("Something wrong!");
 
   return (
@@ -11,5 +10,5 @@ function ErrorMessage(){
       <button onClick={notify}>Ok</button>
     </div>
   );
-}
+};
 export default ErrorMessage;
